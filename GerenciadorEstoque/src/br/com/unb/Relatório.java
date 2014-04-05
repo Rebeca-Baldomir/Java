@@ -1,46 +1,43 @@
 package br.com.unb;
 
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 
-public class Relatório {
-	
-	File arquivo = new File ("Relatório_SI.txt");
-	
+public class RelatÃ³rio {
+	File arquivo = new File ("RelatÃ³rio_SI.txt");
+
 	// Escreve no arquivo
 	FileWriter relatorio = new FileWriter (arquivo, true);
 
 	BufferedWriter r = new BufferedWriter( relatorio );
-	
-	r.write ( "oie" );
+	{	
+	r.write("RelatÃ³rio");		
 	r.newLine ( );
-	
 	r.write("Data: " + new Calendar.DATE());
 	r.newLine( );
-	
-	r.write ("O período de referência utilizado é igual a 1.");
+
+	r.write ("O perÃ­odo de referÃªncia utilizado Ã© igual a 1.");
 	r.newLine();
-	
-	r.write("Estoque mínimo: " + estoqueMinimo);
+
+	r.write("Estoque mÃ­nimo: " + estoqueMinimo);
 	r.newLine( );
 	
 	if (estoqueMinimo > pontoRessuprimento){
-		
-	r.write("Você não precisa renovar o estoque!");
+
+	r.write("VocÃª nÃ£o precisa renovar o estoque!");
 	r.newLine( );
-	
 	}
 	
 	else
-		
-	r.write("Você deve renovar o estoque!");
-	r.newLine( );
-	
-	}
 
+	r.write("VocÃª deve renovar o estoque!");
+	r.newLine( );
+
+	
 	r.close( );
 	relatorio.close( );
 
-
+}
 }
